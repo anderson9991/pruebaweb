@@ -16,7 +16,8 @@ class PartidagrController extends Controller
      */
     public function index()
     {
-        return PartidagrResource::collection (Partidagr::select('videojuegos.nombre','equipos.nombre_equipo','partidagrs.tiempo_inicio','partidagrs.fecha','partidagrs.observacion')
+        return PartidagrResource::collection (Partidagr::select('videojuegos.nombre',
+        'equipos.nombre_equipo','partidagrs.tiempo_inicio','partidagrs.fecha','partidagrs.observacion')
         ->join('videojuegos','partidagrs.videojuego_id','=','videojuego_id')
         ->join('equipos','partidagrs.equipo_id','=','equipo_id')
         ->get());

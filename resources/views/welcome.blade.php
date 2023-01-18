@@ -20,7 +20,7 @@
                     <span id="span3"></span>
                     <span id="span4"></span>
                     <div class="card">
-                        <img src="{{ url('img/DOTA_2_GF.jpg') }}" alt="">
+                        <a href=/dotados><img src="{{ url('img/DOTA_2_GF.jpg') }}" alt="">
                     </div>
                 </a>
             </div>
@@ -33,7 +33,8 @@
                     <span id="span3"></span>
                     <span id="span4"></span>
                     <div class="card">
-                        <img src="{{ url('img/CALL_DUTY_GF.jpg') }}" alt="">
+                    <a href=/callof><img src="{{ url('img/CALL_DUTY_GF.jpg') }}"alt="">
+                    
                     </div>
                 </a>
             </div>
@@ -73,8 +74,10 @@
                     <span id="span3"></span>
                     <span id="span4"></span>
                     <div class="card">
-                        <img src="{{ url('img/VALORANT_GF.jpg') }}" alt="">
+                        
+                        <a href=/comentarios><img src="{{ url('img/VALORANT_GF.jpg') }}" alt="">
                     </div>
+                    
                 </a>
             </div>
         </div>

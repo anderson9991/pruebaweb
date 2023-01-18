@@ -7,6 +7,7 @@ use Livewire\WithPagination;
 use App\Models\Horario;
 use App\Models\Videojuego;
 use App\Models\Aula;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class Horarios extends Component
 {
@@ -127,5 +128,12 @@ class Horarios extends Component
             $record = Horario::where('id', $id);
             $record->delete();
         }
+    }
+
+    public function horariosPDF()
+    {
+        $horarios = Horario::all();
+        $pdf = PDF::loadView('pdf.horarios', compact('horarios'))->setPaper('a4');
+        return $pdf->stream();
     }
 }

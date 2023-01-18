@@ -7,6 +7,7 @@ use Livewire\WithPagination;
 use App\Models\Partidagr;
 use App\Models\Videojuego;
 use App\Models\Equipo;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class Partidagrs extends Component
 {
@@ -112,11 +113,10 @@ class Partidagrs extends Component
         }
     }
 
-    public function destroy($id)
+    public function partidagrPDF()
     {
-        if ($id) {
-            $record = Partidagr::where('id', $id);
-            $record->delete();
-        }
+        $partidagrs = Partidagr::all();
+        $pdf = PDF::loadView('pdf.partidagrs', compact('partidagrs'))->setPaper('a4');
+        return $pdf->stream();
     }
 }

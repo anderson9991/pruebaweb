@@ -21,6 +21,9 @@
 						<div class="btn btn-sm btn-info" data-toggle="modal" data-target="#createDataModal">
 						<i class="fa fa-plus"></i>  Agregar Jugadores
 						</div>
+						<a href="/jugadores-pdf" class="btn btn-sm btn-info">
+							<i class="fa fa-print"></i>  Imprimir PDF
+						</a>
 					</div>
 				</div>
 				

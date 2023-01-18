@@ -6,6 +6,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Jugadore;
 use App\Models\Equipo;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class Jugadores extends Component
 {
@@ -122,5 +123,12 @@ class Jugadores extends Component
             $record = Jugadore::where('id', $id);
             $record->delete();
         }
+    }
+
+    public function jugadoresPDF()
+    {
+        $jugadores = Jugadore::all();
+        $pdf = PDF::loadView('pdf.jugadores', compact('jugadores'))->setPaper('a4');
+        return $pdf->stream();
     }
 }

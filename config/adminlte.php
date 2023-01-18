@@ -313,7 +313,7 @@ return [
         ],
 [
             'text'        => 'Dashboard',
-            'url'         => 'http://127.0.0.1:8000/dashboard',
+            'url'         => '/dashboard',
             'icon'        => 'fas fa-palette',
             //'label'       => "",
             'label_color' => 'success',
@@ -321,54 +321,86 @@ return [
         ['header' => 'account_settings'],
         [
             'text' => 'Categorias',
-            'url'  => 'http://127.0.0.1:8000/categorias',
+            'url'  => '/categorias',
             'icon' => 'fas fa-layer-group',
         ],
         [
             'text' => 'Videojuegos',
-            'url'  => 'http://127.0.0.1:8000/videojuegos',
+            'url'  => '/videojuegos',
             'icon' => 'fa fa-gamepad',
         ],
         [
             'text' => 'Aulas',
-            'url'  => 'http://127.0.0.1:8000/aulas',
+            'url'  => '/aulas',
             'icon' => 'fas fa-house-user',
         ],
         [
             'text' => 'Horarios',
-            'url'  => 'http://127.0.0.1:8000/horarios',
+            'url'  => '/horarios',
             'icon' => 'fa fa-calendar',
         ],
         [
             'text' => 'Jugadores',
-            'url'  => 'http://127.0.0.1:8000/jugadores',
+            'url'  => '/jugadores',
             'icon' => 'fas fa-user-ninja',
         ],
         [
             'text' => 'Equipos',
-            'url'  => 'http://127.0.0.1:8000/equipos',
+            'url'  => '/equipos',
             'icon' => 'fas fa-holly-berry',
         ],
         [
             'text' => 'Partida Grupal',
-            'url'  => 'http://127.0.0.1:8000/partidagrs',
+            'url'  => '/partidagrs',
             'icon' => 'fa fa-globe',
         ],
         [
             'text' => 'Partida Individual',
-            'url'  => 'http://127.0.0.1:8000/partidains',
+            'url'  => '/partidains',
             'icon' => 'fa fa-crosshairs',
         ],
         [
             'text' => 'Inscripcion grupal',
-            'url'  => 'http://127.0.0.1:8000/inscripciongrs',
+            'url'  => '/inscripciongrs',
             'icon' => 'fa fa-users',
         ],
         [
             'text' => 'Inscripcion individual',
-            'url'  => 'http://127.0.0.1:8000/inscripcionins',
+            'url'  => '/inscripcionins',
             'icon' => 'fa fa-child',
         ],
+        ['header'=>'Reportes'],
+        [
+            'text' => 'Generar reportes',
+            'icon' => 'fa fa-file-pdf',
+            'submenu' => [
+                [
+                    'text' => 'Reporte inscripcion individual',
+                    'url'  => '/inscripcionins-pdf',
+                    'icon' => 'fa fa-child',
+                ],
+                [
+                    'text' => 'Reporte inscripcion grupal',
+                    'url'  => '/inscripciongrs-pdf',
+                    'icon' => 'fa fa-child',
+                ],
+                [
+                    'text' => 'Reporte horario',
+                    'url'  => '/horarios-pdf',
+                    'icon' => 'fa fa-child',
+                ],
+                [
+                    'text' => 'Reporte jugadores',
+                    'url'  => '/jugadores-pdf',
+                    'icon' => 'fa fa-child',
+                ],
+                [
+                    'text' => 'Reporte partida grupal',
+                    'url'  => '/partidagrs-pdf',
+                    'icon' => 'fa fa-child',
+                ],
+            ]
+        ]
     ],
 
     /*

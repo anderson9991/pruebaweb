@@ -7,6 +7,7 @@ use Livewire\WithPagination;
 use App\Models\Inscripcionin;
 use App\Models\Videojuego;
 use App\Models\Jugadore;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class Inscripcionins extends Component
 {
@@ -104,5 +105,12 @@ class Inscripcionins extends Component
             $record = Inscripcionin::where('id', $id);
             $record->delete();
         }
+    }
+
+    public function inscripcioninPDF()
+    {
+        $inscripcionins = Inscripcionin::all();
+        $pdf = PDF::loadView('pdf.inscripcionins', compact('inscripcionins'))->setPaper('a4');
+        return $pdf->stream();
     }
 }

@@ -13,7 +13,7 @@ class Partidagr extends Model
 
     protected $table = 'partidagrs';
 
-    protected $fillable = ['videojuego_id','equipo_id','tiempo_inicio','fecha','observacion'];
+    protected $fillable = ['videojuego.nombre','equipo_id','tiempo_inicio','fecha','observacion'];
 	
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne

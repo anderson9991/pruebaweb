@@ -21,6 +21,9 @@
 						<div class="btn btn-sm btn-info" data-toggle="modal" data-target="#createDataModal">
 						<i class="fa fa-plus"></i>  Agregar Inscripción
 						</div>
+						<a href="/inscripcionins-pdf" class="btn btn-sm btn-info">
+							<i class="fa fa-print"></i>  Imprimir PDF
+						</a>
 					</div>
 				</div>
 				
